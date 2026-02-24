@@ -1,9 +1,15 @@
 [
   {
-    "bgImage": "10.webp",
-    "title": "Videos",
+    "bgImage": "header-bg.webp",
+    "title": "Ipsum dolor sit",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
-    "url": "#videos"
+    "url": "#!"
+  },
+  {
+    "bgImage": "10.webp",
+    "title": "Consectetur adipiscing",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
+    "url": "#!"
   },
   {
     "bgImage": "13.webp",
