@@ -1,0 +1,66 @@
+---
+import { Icon } from "astro-icon/components";
+
+interface Props {
+  social: any[];
+  class?: string;
+  size?: "normal" | "big";
+  variant?: "primary" | "secondary" | "dark";
+}
+
+const {
+  social,
+  class: className,
+  size = "normal",
+  variant = "primary",
+} = Astro.props as Props;
+
+// Icon name mapping for specific cases
+const iconMap: Record<string, string> = {
+  facebook: "facebook-f",
+  twitter: "x-twitter",
+  // add more mappings as needed
+};
+
+// Simple size classes
+const sizeClasses = {
+  normal: "p-2",
+  big: "p-4",
+};
+
+// Simple variant classes
+const variantClasses = {
+  primary: "bg-primary hover:bg-primary-hover",
+  secondary: "bg-secondary hover:bg-secondary-hover",
+  dark: "bg-dark hover:bg-primary",
+};
+
+// Icon sizes
+const iconSizes = {
+  normal: 24,
+  big: 32,
+};
+
+// Get the correct icon name
+const getIconName = (name: string) => {
+  return iconMap[name] || name;
+};
+
+const containerClasses = className || "items-center justify-center gap-6";
+---
+
+<div class={`flex ${containerClasses}`}>
+  {
+    social.map((item: any) => (
+      <a
+        href={item.url}
+        class={`text-white ${variantClasses[variant]} rounded-full ${sizeClasses[size]} transition-all duration-200 ease-in-out hover:-translate-y-0.5`}
+      >
+        <Icon
+          name={`fa7-brands:${getIconName(item.name)}`}
+          size={iconSizes[size]}
+        />
+      </a>
+    ))
+  }
+</div>

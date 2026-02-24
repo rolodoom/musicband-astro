@@ -1,0 +1,74 @@
+---
+export interface Props {
+  href?: string;
+  disabled?: boolean;
+  type?: "link" | "button";
+  size?: "normal" | "big";
+  variant?: "primary" | "secondary" | "outline"; // Add more variants as needed
+  class?: string;
+  id?: string;
+}
+
+const {
+  href = "#",
+  disabled = false,
+  type = "link",
+  size = "normal",
+  variant = "primary",
+  class: className = "", // Rename to avoid conflict with class keyword
+  ...rest
+} = Astro.props;
+
+// Base styles shared by all variants
+const baseStyles =
+  "inline-flex cursor-pointer items-center justify-center rounded-lg transition-all duration-200 ease-in-out hover:-translate-y-0.5";
+
+// Variant styles
+const variantStyles = {
+  primary: "bg-primary text-white hover:bg-primary-hover hover:text-slate-100",
+  secondary:
+    "bg-secondary text-white hover:bg-secondary-hover hover:text-slate-100",
+  outline:
+    "border-1! border-primary bg-transparent text-primary hover:bg-transparent hover:border-white hover:text-slate-200",
+  // Add more variants here in the future
+};
+
+// Disabled variant styles
+const disabledVariantStyles = {
+  primary: "bg-primary-disable text-primary italic cursor-default",
+  secondary: "bg-secondary/50 text-secondary italic cursor-default", // Example for disabled secondary
+  outline:
+    "border-1! border-primary-disable text-primary-disable italic bg-transparent cursor-default",
+  // Add more disabled variants here
+};
+
+// Size-specific styles
+const sizeStyles = {
+  normal: "px-4 py-1",
+  big: "px-10 py-5 text-lg font-bold font-heading",
+};
+
+// Combine all styles for enabled state
+const linkStyles = `${baseStyles} ${variantStyles[variant]} ${sizeStyles[size]} ${className}`;
+
+// Disabled styles
+const disabledStyles = `rounded-lg ${disabledVariantStyles[variant]} ${sizeStyles[size]} ${className}`;
+---
+
+{
+  !disabled ? (
+    type === "link" ? (
+      <a class={linkStyles} href={href}>
+        <slot />
+      </a>
+    ) : (
+      <button class={linkStyles} {...rest}>
+        <slot />
+      </button>
+    )
+  ) : (
+    <span class={disabledStyles}>
+      <slot />
+    </span>
+  )
+}

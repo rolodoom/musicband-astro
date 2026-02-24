@@ -1,0 +1,15 @@
+---
+import { SITE_CONFIG } from "@/config/site";
+
+import BaseHead from "@components/layout/BaseHead.astro";
+const { title, description, image = "/images/cover.png" } = Astro.props;
+---
+
+<html lang={SITE_CONFIG.locale}>
+  <head>
+    <BaseHead title={title} description={description} image={image} />
+  </head>
+  <body class="dark:bg-slate-950 dark:text-white">
+    <slot />
+  </body>
+</html>

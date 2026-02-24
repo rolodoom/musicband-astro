@@ -1,0 +1,69 @@
+---
+import { Modal, ModalBody } from "free-astro-components";
+import Button from "@/components/ui/Button.astro";
+import { formatDate } from "@/utils/format";
+import { slugify } from "@/utils/format";
+import { Icon } from "astro-icon/components";
+import StreamingIcons from "../ui/StreamingIcons.astro";
+
+const { release } = Astro.props;
+
+const { title, subtitle, date, description, image, label, format } = release;
+const formattedDate = formatDate(date);
+const slug = slugify(release.title);
+---
+
+<Modal
+  id={`modal-${slug}`}
+  size="full"
+  class="custom-modal"
+  showCloseIcon={false}
+>
+  <ModalBody>
+    <div class="mx-auto max-w-4xl py-12">
+      <header class="heading mb-10 flex flex-col items-start gap-2">
+        <h1 class="font-heading text-5xl font-extrabold uppercase">
+          {title}
+        </h1>
+        <h2 class="font-serif text-lg italic">{subtitle}</h2>
+      </header>
+      <article class="mt-6 flex gap-12">
+        <div class="flex w-1/2 flex-col gap-6">
+          <a
+            href={`/images/releases/${image}`}
+            data-fancybox
+            data-caption={title}
+            class="group relative block cursor-pointer overflow-hidden border! border-black/10!"
+          >
+            <img
+              src={`/images/releases/thumbs/${image}`}
+              alt={title}
+              class="aspect-square w-full object-cover"
+            />
+            <div
+              class="bg-primary/90 pointer-events-none absolute inset-0 flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+            >
+              <span class="text-4xl text-white">
+                <Icon name="fa7-solid:magnifying-glass-plus" size={64} />
+              </span>
+            </div>
+          </a>
+
+          <Button type="button" data-modal-close class="self-start"
+            ><Icon name="fa7-solid:xmark" size={16} class="mr-1" />Close</Button
+          >
+        </div>
+        <div class="flex w-1/2 flex-col gap-7 text-left font-serif">
+          <div>{description}</div>
+          <ul>
+            <li><strong>Released:</strong> {formattedDate}</li>
+            <li><strong>Label:</strong> {label}</li>
+            <li><strong>Format:</strong> {format}</li>
+          </ul>
+
+          <StreamingIcons streaming={release.streaming} />
+        </div>
+      </article>
+    </div>
+  </ModalBody>
+</Modal>

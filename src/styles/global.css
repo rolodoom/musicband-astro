@@ -1,0 +1,61 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@theme {
+  --color-primary: #367258;
+  --color-secondary: #ca4ab6;
+  --color-dark: #01161e;
+
+  --color-primary-hover: #26503e;
+  --color-primary-disable: #1b392c;
+  --color-secondary-hover: #8d347f;
+  --color-secondary-hover: #65255b;
+
+  --font-serif:
+    "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol", "Noto Color Emoji";
+
+  --font-heading:
+    "Montserrat", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Helvetica Neue, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    Segoe UI Symbol, "Noto Color Emoji";
+}
+
+html {
+  font-family: var(--font-serif);
+}
+
+/* swiper */
+swiper-container,
+.swiper {
+  --swiper-theme-color: theme(--color-white);
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  transition: all 0.2s ease-in-out;
+}
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  opacity: 0.5;
+  transform: scale(1.1);
+}
+
+/* .custom-modal {
+  --ac-modal-background-color: #020618;
+  color: #fff;
+} */
+
+.ac-modal-close {
+  width: 48px !important;
+  height: 48px !important;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ac-modal-close svg {
+  width: 48px !important;
+  height: 48px !important;
+}

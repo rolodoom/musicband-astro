@@ -1,0 +1,63 @@
+{
+  "id": "releases",
+  "title": "Music",
+  "subtitle": "In massa tempor nec feugiat nisl pretium.",
+  "releases": [
+    {
+      "title": "All things New",
+      "subtitle": "All Lorem ipsum dolor sit amet consectetur.",
+      "date": "2010-05-06",
+      "image": "1.webp",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!",
+      "format": "CD",
+      "label": "Record Label",
+      "streaming": [
+        { "name": "bandcamp", "url": "#!" },
+        { "name": "spotify", "url": "#!" },
+        { "name": "apple", "url": "#!" }
+      ]
+    },
+    {
+      "title": "Renegade Waves",
+      "subtitle": "Lorem ipsum dolor sit amet consectetur.",
+      "date": "2013-06-16",
+      "image": "2.webp",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!",
+      "format": "CD",
+      "label": "Record Label",
+      "streaming": [
+        { "name": "bandcamp", "url": "#!" },
+        { "name": "spotify", "url": "#!" },
+        { "name": "apple", "url": "#!" }
+      ]
+    },
+    {
+      "title": "Jungle - The Hits",
+      "subtitle": "Lorem ipsum dolor sit amet consectetur.",
+      "date": "2015-01-22",
+      "image": "3.webp",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!",
+      "format": "CD",
+      "label": "Record Label",
+      "streaming": [
+        { "name": "bandcamp", "url": "#!" },
+        { "name": "spotify", "url": "#!" },
+        { "name": "apple", "url": "#!" }
+      ]
+    },
+    {
+      "title": "The Alternative",
+      "subtitle": "Lorem ipsum dolor sit amet consectetur.",
+      "date": "2020-05-06",
+      "image": "4.webp",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!",
+      "format": "CD",
+      "label": "Record Label",
+      "streaming": [
+        { "name": "bandcamp", "url": "#!" },
+        { "name": "spotify", "url": "#!" },
+        { "name": "apple", "url": "#!" }
+      ]
+    }
+  ]
+}

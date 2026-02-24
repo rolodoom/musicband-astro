@@ -1,0 +1,38 @@
+---
+import { Icon } from "astro-icon/components";
+import { slugify } from "@utils/format";
+import SocialIcons from "../ui/SocialIcons.astro";
+
+const { musician, index } = Astro.props;
+
+const { name, instrument, image, description, social } = musician;
+const slug = slugify(musician.name);
+---
+
+<>
+  <a
+    data-modal-trigger={`modal-${slug}`}
+    data-aos="fade-up"
+    data-aos-delay={index * 150}
+    class="group relative block cursor-pointer overflow-hidden"
+  >
+    <img
+      src={`/images/musicians/thumbs/${image}`}
+      alt={name}
+      class="box-border block w-full object-cover"
+    />
+    <div
+      class="bg-primary/90 pointer-events-none absolute inset-0 flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+    >
+      <span class="text-4xl text-white">
+        <Icon name="fa7-solid:plus" size={64} />
+      </span>
+    </div>
+  </a>
+
+  <div class="mt-6">
+    <h3 class="font-heading text-2xl font-bold">{name}</h3>
+    <p class="mb-4 opacity-80">{instrument}</p>
+    <SocialIcons social={social} />
+  </div>
+</>

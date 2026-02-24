@@ -1,0 +1,9 @@
+---
+import Section from "@components/shared/Section.astro";
+import bioData from "@data/bio.json";
+const { id, title, subtitle } = bioData;
+---
+
+<Section title={title} subtitle={subtitle} id={id} fullHeight>
+  <p>Coming soon!</p>
+</Section>

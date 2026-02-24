@@ -1,0 +1,42 @@
+{
+  "id": "bio",
+  "title": "Bio",
+  "subtitle": "Aliquet nibh praesent tristique magna sit.",
+  "bios": [
+    {
+      "title": "2009-2011",
+      "subtitle": "Our Humble Beginnings",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!",
+      "image": "/assets/img/bio/883.jpg",
+      "date": "2009-05-06"
+    },
+    {
+      "title": "March 2011",
+      "subtitle": "A Band is Born",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!",
+      "image": "/assets/img/bio/453.jpg",
+      "date": "2011-05-06"
+    },
+    {
+      "title": "December 2012",
+      "subtitle": "On the Road",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!",
+      "image": "/assets/img/bio/452.jpg",
+      "date": "2012-05-06"
+    },
+    {
+      "title": "July 2014",
+      "subtitle": "Into the Studio",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!",
+      "image": "/assets/img/bio/304.jpg",
+      "date": "2014-05-06"
+    },
+    {
+      "title": "Be Part\nOf Our\nStory!",
+      "subtitle": "Our Humble Beginnings",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!",
+      "image": "/assets/img/bio/883.jpg",
+      "date": "2015-05-06"
+    }
+  ]
+}

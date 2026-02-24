@@ -1,0 +1,38 @@
+---
+import { formatDate } from "@/utils/format";
+import { Icon } from "astro-icon/components";
+import { slugify } from "@utils/format";
+
+const { release, index } = Astro.props;
+
+const { title, subtitle, date, description, image } = release;
+const formattedDate = formatDate(date);
+const slug = slugify(release.title);
+---
+
+<>
+  <a
+    data-modal-trigger={`modal-${slug}`}
+    data-aos="fade-up"
+    data-aos-delay={index * 150}
+    class="group relative block cursor-pointer overflow-hidden"
+  >
+    <img
+      src={`/images/releases/thumbs/${image}`}
+      alt={title}
+      class="box-border block aspect-square w-full object-cover"
+    />
+    <div
+      class="bg-primary/90 pointer-events-none absolute inset-0 flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+    >
+      <span class="text-4xl text-white">
+        <Icon name="fa7-solid:plus" size={64} />
+      </span>
+    </div>
+  </a>
+
+  <div class="mt-6">
+    <h3 class="font-heading text-2xl font-bold">{title}</h3>
+    <time class="italic opacity-80" datetime={date}>{formattedDate}</time>
+  </div>
+</>

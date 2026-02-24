@@ -1,0 +1,37 @@
+{
+  "id": "videos",
+  "title": "Videos",
+  "subtitle": "Tempor orci eu lobortis elementum nibh tellus.",
+  "videos": [
+    {
+      "title": "Highway Tune",
+      "subtitle": "Official Video",
+      "id": "aJg4OJxp-co",
+      "date": "2017-03-31T00:00:00.000Z"
+    },
+    {
+      "title": "Safari Song",
+      "subtitle": "Live in Toronto / 2018",
+      "id": "PJXizasWnIo",
+      "date": "2017-05-25T00:00:00.000Z"
+    },
+    {
+      "title": "Heat Above",
+      "subtitle": "Official Video",
+      "id": "vrWFu5k1Jpg",
+      "date": "2021-02-18T00:00:00.000Z"
+    },
+    {
+      "title": "Age of Machine",
+      "subtitle": "Official Live",
+      "id": "t6I84TgnqHU",
+      "date": "2018-09-13T00:00:00.000Z"
+    },
+    {
+      "title": "Black Smoke Rising",
+      "subtitle": "Live on SNL",
+      "id": "DqjeLipYpsw",
+      "date": "2017-11-10T00:00:00.000Z"
+    }
+  ]
+}

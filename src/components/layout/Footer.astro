@@ -1,0 +1,19 @@
+---
+import creditsData from "@data/credits.json";
+import bandData from "@data/band.json";
+
+const { text, prefix, url } = creditsData;
+const { bandName } = bandData;
+---
+
+<footer class="font-heading bg-dark p-6 text-center text-sm font-medium">
+  <div class="mx-auto flex max-w-7xl justify-between">
+    <div class="copyright">© {new Date().getFullYear()} {bandName}</div>
+    <div class="credits text-white/80">
+      {prefix}
+      <a href={url} class="text-primary font-semibold hover:text-white"
+        >{text}</a
+      >
+    </div>
+  </div>
+</footer>

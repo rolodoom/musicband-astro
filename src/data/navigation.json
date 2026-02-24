@@ -1,0 +1,28 @@
+{
+  "navItems": [
+    {
+      "label": "Videos",
+      "url": "#videos"
+    },
+    {
+      "label": "Releases",
+      "url": "#releases"
+    },
+    {
+      "label": "Bio",
+      "url": "#bio"
+    },
+    {
+      "label": "Musicians",
+      "url": "#musicians"
+    },
+    {
+      "label": "Gallery",
+      "url": "#gallery"
+    },
+    {
+      "label": "Contact",
+      "url": "#contact"
+    }
+  ]
+}

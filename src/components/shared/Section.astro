@@ -1,0 +1,106 @@
+---
+interface Props {
+  id: string;
+  title: string;
+  subtitle?: string;
+  bgImage?: string;
+  bgColor?: string;
+  overlayColor?: string;
+  overlayOpacity?: number;
+  darkmode?: boolean;
+  fullHeight?: boolean;
+  enableAnimation?: boolean; // New prop to control AOS
+}
+
+const {
+  id,
+  title,
+  subtitle,
+  bgImage,
+  bgColor,
+  overlayColor = "#01161eE6",
+  overlayOpacity = 0.5,
+  darkmode = false,
+  fullHeight = false,
+  enableAnimation = true, // Default to true for backward compatibility
+} = Astro.props;
+
+const finalBgColor =
+  bgColor !== undefined ? bgColor : darkmode ? "bg-dark" : "bg-slate-300";
+
+const isHexColor = finalBgColor?.startsWith("#");
+const bgStyle = isHexColor ? { backgroundColor: finalBgColor } : {};
+const bgClass = !isHexColor && !bgImage ? finalBgColor : "";
+
+const heightClass = fullHeight ? "min-h-screen" : "min-h-[calc(100vh-130px)]";
+
+const titleColor = darkmode ? "text-white" : "text-slate-800";
+const subtitleColor = darkmode ? "text-gray-100" : "text-gray-700";
+const textColor = darkmode ? "text-white" : "text-gray-800";
+
+// AOS attributes - only add if enabled
+const aosAttributes = enableAnimation
+  ? { "data-aos": "fade-up" }
+  : { "data-aos": "fade-in" };
+const titleAosAttributes = { "data-aos": "fade-down" };
+const subtitleAosAttributes = { "data-aos": "fade-up" };
+---
+
+<section id={id}>
+  <div
+    {...aosAttributes}
+    class={`relative flex w-full items-center justify-center overflow-hidden py-20 ${heightClass} ${bgClass}`}
+    style={bgStyle}
+  >
+    <!-- Background Image -->
+    {
+      bgImage && (
+        <div
+          class="absolute inset-0 -z-20"
+          style={{
+            backgroundImage: `url(${bgImage})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+          }}
+        />
+      )
+    }
+
+    <!-- Overlay -->
+    {
+      bgImage && (
+        <div
+          class="absolute inset-0 -z-10"
+          style={{
+            backgroundColor: overlayColor,
+            opacity: overlayOpacity,
+          }}
+        />
+      )
+    }
+
+    <!-- Content -->
+    <div class={`relative z-10 p-8 container text-center ${textColor}`}>
+      <div class="mb-16">
+        <h1
+          class={`mb-4 text-4xl uppercase font-heading font-bold ${titleColor}`}
+          {...titleAosAttributes}
+        >
+          {title}
+        </h1>
+        {
+          subtitle && (
+            <h2
+              class={`text-md italic ${subtitleColor}`}
+              {...subtitleAosAttributes}
+            >
+              {subtitle}
+            </h2>
+          )
+        }
+      </div>
+      <slot />
+    </div>
+  </div>
+</section>

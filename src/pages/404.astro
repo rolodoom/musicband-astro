@@ -1,0 +1,24 @@
+---
+import Section from "@/components/shared/Section.astro";
+import LayoutInnerPages from "../layouts/LayoutInnerPages.astro";
+import Button from "@/components/ui/Button.astro";
+import Footer from "@/components/layout/Footer.astro";
+---
+
+<LayoutInnerPages title="404" description="Page Not Found">
+  <Section
+    title="404"
+    subtitle="Page Not Found"
+    id="404"
+    darkmode
+    fullHeight
+    bgColor="bg-slate-950"
+  >
+    <Button href="/">
+      <span
+        class="inline-block transition-transform duration-200 ease-out group-hover:-translate-x-1"
+        >&larr;</span
+      > Go Back
+    </Button>
+  </Section>
+</LayoutInnerPages>

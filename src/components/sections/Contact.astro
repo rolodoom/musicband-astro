@@ -1,0 +1,39 @@
+---
+import bandData from "@data/band.json";
+
+import { getFileExtension, getIconId } from "@/utils/format";
+
+import SocialIcons from "@components/ui/SocialIcons.astro";
+import Section from "@components/shared/Section.astro";
+import Button from "@components/ui/Button.astro";
+import { Icon } from "astro-icon/components";
+
+const { social, press } = bandData;
+---
+
+<Section
+  title="Contact"
+  subtitle="Get in touch with us"
+  id="contact"
+  bgImage="/images/bg-contact.jpg"
+  overlayOpacity={0.7}
+  darkmode
+>
+  <div class="flex justify-center gap-4 pb-16">
+    {
+      press.length > 0 &&
+        press.map((file: any) => {
+          const extension = getFileExtension(file.url);
+          const icon = getIconId(extension);
+
+          return (
+            <Button size="big" href={file.url} variant={file.variant}>
+              <Icon name={`fa7-solid:${icon}`} class="mr-2" size={32} />
+              {file.name}
+            </Button>
+          );
+        })
+    }
+  </div>
+  <SocialIcons social={social} variant="dark" size="big" />
+</Section>

@@ -1,0 +1,18 @@
+---
+import { Icon } from "astro-icon/components";
+import Button from "./Button.astro";
+import { toTitleCase } from "@utils/format";
+
+const { streaming } = Astro.props;
+---
+
+<div class="flex flex-wrap items-center gap-3 pt-6">
+  {
+    streaming.map((item: any) => (
+      <Button href={item.url}>
+        <Icon name={`fa7-brands:${item.name}`} size={20} class="mr-0.5" />
+        <span>{toTitleCase(item.name)}</span>
+      </Button>
+    ))
+  }
+</div>

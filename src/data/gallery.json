@@ -1,0 +1,50 @@
+{
+  "id": "gallery",
+  "images": [
+    {
+      "file": "1028.webp",
+      "title": "Kota Garut, Indonesia"
+    },
+    {
+      "file": "1033.webp",
+      "title": "Zurich Airport, Zürich-Flughafen, Switzerland"
+    },
+    {
+      "file": "1039.webp",
+      "title": "Park relaxing time"
+    },
+    {
+      "file": "103.webp",
+      "title": "Park relaxing time. Active Oval Loop, Atlanta, GA 30309, USA, United States"
+    },
+    {
+      "file": "1047.webp",
+      "title": "An Alleyway in Seattle, Washington."
+    },
+    {
+      "file": "1048.webp",
+      "title": "Office buildings under clouds"
+    },
+    {
+      "file": "1065.webp",
+      "title": "Bastia, Corse, France"
+    },
+    {
+      "file": "1073.webp",
+      "title": "FIKA Cafe, Toronto, Canada"
+    },
+    { "file": "110.webp", "title": "Evening in a pasture" },
+    {
+      "file": "116.webp",
+      "title": "A beautiful farmhouse in Toscana. Featured in Gladiator movie"
+    },
+    {
+      "file": "142.webp",
+      "title": "External view of Chateau de Chambord in France."
+    },
+    {
+      "file": "155.webp",
+      "title": "Railroad tracks by the beach"
+    }
+  ]
+}

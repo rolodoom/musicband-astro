@@ -1,0 +1,24 @@
+{
+  "bandName": "MusicBand",
+  "slogan": "A musician page theme",
+  "description": "A musician page theme",
+  "logo": "/images/navbar-logo.svg",
+  "press": [
+    { "name": "Rider [1.2 MiB]", "url": "#!.pdf", "variant": "secondary" },
+    { "name": "Brochure [350 KiB]", "url": "#!.pdf" },
+    { "name": "Photos [5.2 MiB]", "url": "#!.zip" }
+  ],
+  "social": [
+    { "name": "instagram", "url": "#!" },
+    { "name": "twitter", "url": "#!" },
+    { "name": "facebook", "url": "#!" }
+  ],
+  "streaming": [
+    { "name": "bandcamp", "url": "#!" },
+    { "name": "spotify", "url": "#!" },
+    { "name": "deezer", "url": "#!" },
+    { "name": "applemusic", "url": "#!" },
+    { "name": "amazonmusic", "url": "#!" },
+    { "name": "tidal", "url": "#!" }
+  ]
+}

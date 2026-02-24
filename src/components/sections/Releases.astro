@@ -1,0 +1,47 @@
+---
+import releasesData from "@data/releases.json";
+import bandData from "@data/band.json";
+
+import { getSortedItems } from "@utils/filter";
+
+import Section from "@components/shared/Section.astro";
+import ReleaseItem from "@components/shared/ReleaseItem.astro";
+import ReleaseModal from "../shared/ReleaseModal.astro";
+
+const { id, title, subtitle, releases } = releasesData;
+const { streaming } = bandData;
+
+const sortedReleases = getSortedItems(releases);
+---
+
+<Section title={title} subtitle={subtitle} id={id} darkmode>
+  <div class="container mx-auto flex w-full flex-wrap justify-center">
+    {
+      sortedReleases.map((release, index: number) => (
+        <div class="mb-4 w-full px-6 sm:w-1/2 sm:px-3 lg:w-1/4 xl:w-1/4">
+          <ReleaseItem release={release} index={index} />
+        </div>
+      ))
+    }
+  </div>
+
+  {
+    streaming.length > 0 && (
+      <div class="mt-6 flex flex-wrap justify-center gap-1">
+        {streaming.map((service) => {
+          return (
+            <a href={service.url} class="group mt-10">
+              <img
+                class="opacity-50 transition-opacity duration-300 group-hover:opacity-100"
+                src={`/images/logos/${service.name}.svg`}
+                alt={service.name}
+              />
+            </a>
+          );
+        })}
+      </div>
+    )
+  }
+
+  {sortedReleases.map((release) => <ReleaseModal release={release} />)}
+</Section>

@@ -1,0 +1,40 @@
+---
+import { Video } from "@fancyapps/ui";
+import { Icon } from "astro-icon/components";
+import { getYouTubeThumbnailUrl, formatDate } from "@utils/format";
+
+const { video, index } = Astro.props;
+const formattedDate = formatDate(video.date);
+---
+
+<>
+  <a
+    href={`https://www.youtube.com/watch?v=${video.id}`}
+    data-fancybox
+    data-aos="fade-up"
+    data-aos-delay={index * 100}
+    class="group relative block overflow-hidden"
+  >
+    <img
+      src={getYouTubeThumbnailUrl(video.id)}
+      alt={video.title}
+      class="aspect-video w-full object-cover"
+    />
+    <div
+      class="group-hover:bg-primary/90 pointer-events-none absolute inset-0 flex items-center justify-center duration-300 group-hover:opacity-100"
+    >
+      <span class="text-4xl text-white">
+        <Icon name="fa7-solid:play" size={48} />
+      </span>
+    </div>
+  </a>
+  <div class="mt-6">
+    <h3 class="font-heading text-xl font-bold">{video.title}</h3>
+    {
+      video.subtitle && (
+        <div class="video-caption-subheading text-muted">{video.subtitle}</div>
+      )
+    }
+    <time class="italic opacity-80" datetime={video.date}>{formattedDate}</time>
+  </div>
+</>
