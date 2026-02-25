@@ -1,11 +1,11 @@
 ---
-import releasesData from "@data/releases.json";
-import bandData from "@data/band.json";
+import releasesData from "@/data/releases.json";
+import bandData from "@/data/band.json";
 
-import { getSortedItems } from "@utils/filter";
+import { getSortedItems } from "@/utils/filter";
 
-import Section from "@components/shared/Section.astro";
-import ReleaseItem from "@components/shared/ReleaseItem.astro";
+import Section from "@/components/shared/Section.astro";
+import ReleaseItem from "@/components/shared/ReleaseItem.astro";
 import ReleaseModal from "../shared/ReleaseModal.astro";
 
 const { id, title, subtitle, releases } = releasesData;

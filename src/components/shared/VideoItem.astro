@@ -1,7 +1,7 @@
 ---
 import { Video } from "@fancyapps/ui";
 import { Icon } from "astro-icon/components";
-import { getYouTubeThumbnailUrl, formatDate } from "@utils/format";
+import { getYouTubeThumbnailUrl, formatDate } from "@/utils/format";
 
 const { video, index } = Astro.props;
 const formattedDate = formatDate(video.date);
