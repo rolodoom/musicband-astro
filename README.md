@@ -1,34 +1,21 @@
-# Atro Template
+# MusicBandAstro
 
-## SEO-ready Astro starter template with Tailwind CSS for building your modern web projects.
+MusicBandAstro is an **SEO-ready one-page** template for musicians, built with **Astro** and **Tailwind CSS**. It includes sections for Videos, Music, Our Story, The Band, Gallery, and Contact. The design is loosely inspired by [Agency](https://startbootstrap.com/theme/agency).
 
-[![Astro Template](public/images/cover.png)](https://github.com/rolodoom/astro-template)
+> **Project history:** Originally created as a Pug template, then migrated to React, it has now been rebuilt in Astro for a lightweight and maintainable setup.
+
+[![MusicBandSstro](public/images/og_image.png)](https://github.com/rolodoom/musicband-astro)
 
 ## Status
 
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/rolodoom/astro-template/master/LICENSE)
-
-## ✨ Features
-
-- 🚀 Astro Starter Setup – Component-based architecture with ready-to-use pages and layouts.
-
-- 🔍 SEO-ready – Pre-configured meta tags, Open Graph, and Twitter Cards for better search visibility.
-
-- 🎨 Tailwind CSS Integration – Fully set up with responsive utilities and dark mode support.
-
-- ⚡ Fast & Optimized – Pre-rendered pages, minimal bundle size, and image optimization.
-
-## 🛠️ Tech Stack
-
-- [Astro](https://astro.build/)
-- [Tailwind CSS](https://tailwindcss.com/)
+[![GitHub license](https://img.shields.io/badge/license-GPL--3.0-blue)](https://raw.githubusercontent.com/rolodoom/musicband-astro/master/LICENSE)
 
 ## 🚀 Getting Started
 
 1. Create a new project using this template:
 
    ```bash
-   pnpm create astro@latest -- --template rolodoom/astro-template
+   pnpm create astro@latest -- --template rolodoom/musicband-astro
    ```
 
 2. Go to your project folder and install dependencies:
@@ -59,33 +46,6 @@ All commands are run from the root of the project, from a terminal:
 | `pnpm astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `pnpm astro -- --help` | Get help using the Astro CLI                     |
 
-## 📁 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
-│   ├── favicon.svg
-│   └── images/
-│       └── cover.png
-├── src/
-│   └── components/
-│       └── BaseHead.astro
-│   └── layout/
-│       └── Layout.astro
-│   └── pages/
-│       └── index.astro
-│       └── 404.astro
-│   └── styles/
-│       └── global.css
-└── package.json
-```
-
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
 ## 🔧 Configuration
 
 ### SEO Configuration
@@ -115,8 +75,8 @@ Tailwind CSS is pre-configured and ready to use. Customization can be done throu
 
 ## 🐛 Bugs and Issues
 
-Have a bug or an issue with this template? [Open a new issue](https://github.com/rolodoom/astro-template/issues) here on GitHub.
+Have a bug or an issue with this template? [Open a new issue](https://github.com/rolodoom/musicband-astro/issues) here on GitHub.
 
 ## 📝 License
 
-This code in this repository is released under the [MIT](https://raw.githubusercontent.com/rolodoom/astro-template/master/LICENSE) license, which means you can use it for any purpose, even for commercial projects. In other words, do what you want with it. The only requirement with the MIT License is that the license and copyright notice must be provided with the software.
+This code is released under the [GPL-3.0](https://github.com/rolodoom/musicband-astro/master/LICENSE) license, which means you have the four freedoms to run, study, share, and modify the software. Any derivative work must be distributed under the same or equivalent license terms.
