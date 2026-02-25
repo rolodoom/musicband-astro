@@ -31,3 +31,19 @@
     });
   });
 })();
+
+(function () {
+  // Listen for Escape key presses
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+      // Try to restore scrolling
+      document.body.style.overflow = "";
+
+      // Make sure page can receive pointer events again
+      document.body.style.pointerEvents = "auto";
+
+      // Optional: focus on the body so keyboard works again
+      document.body.focus?.();
+    }
+  });
+})();
