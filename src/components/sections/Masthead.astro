@@ -1,46 +1,58 @@
 ---
+import mastheadDataJson from "@/data/masthead.json";
+import Button from "../ui/Button.astro";
 import { Icon } from "astro-icon/components";
 
-import mastheadData from "@/data/masthead.json";
-import Button from "../ui/Button.astro";
+const mastheadData: {
+  logo?: { image: string; descritpion: string };
+  text?: { title: string; subtitle: string };
+  bgImage: string;
+} = mastheadDataJson;
+
+const { bgImage, text = null, logo = null } = mastheadData;
 ---
 
-<div class="swiper h-screen" data-aos="fade-in">
-  <div class="swiper-wrapper">
-    {
-      mastheadData.map((item) => {
-        const { bgImage, title, description, url } = item;
-        return (
-          <div
-            class="swiper-slide relative bg-cover bg-center bg-no-repeat"
-            style={{ backgroundImage: `url(/images/masthead/${bgImage})` }}
-          >
-            <div class="from-dark/90 via-dark/50 to-dark/30 absolute inset-0 bg-linear-to-b from-0% via-60% to-100%" />
+<div class="h-screen" data-aos="fade-in">
+  <div
+    class="swiper-slide relative bg-cover bg-center bg-no-repeat"
+    style={{ backgroundImage: `url(${bgImage})` }}
+  >
+    <div
+      class="from-dark/90 via-dark/50 to-dark/30 absolute inset-0 bg-linear-to-b from-0% via-60% to-100%"
+    >
+    </div>
 
-            <div class="relative z-10 mx-auto flex h-full w-2/3 max-w-180 flex-col items-center justify-center">
-              <p>
-                <Icon name="fa7-regular:house" size={64} class="mb-3" />
-              </p>
-              <h1 class="font-heading text-center text-3xl font-bold">
-                {title}
-              </h1>
-              <h2 class="text-center text-2xl font-light">{description}</h2>
-              <Button href={url} size="big" class="mt-6">
-                <Icon name="fa7-solid:angles-down" size={16} class="mr-1" />
-                Continue
-                <Icon name="fa7-solid:angles-down" size={16} class="ml-1" />
-              </Button>
-            </div>
+    <div
+      class="relative z-10 container mx-auto flex h-full flex-col items-center justify-center"
+    >
+      {
+        logo ? (
+          <div class="mx-auto flex flex-col items-center gap-6">
+            <img
+              src={logo.image}
+              alt={logo.descritpion}
+              class="h-30 max-w-[320px]"
+            />
+            <Button href="#videos" size="big">
+              Continue
+              <Icon name="fa7-solid:angle-down" size={24} class="ml-1" />
+            </Button>
           </div>
-        );
-      })
-    }
+        ) : (
+          <div class="mx-auto flex flex-col items-center">
+            <h2 class="mb-4 text-center text-2xl font-normal italic">
+              {text?.subtitle}
+            </h2>
+            <h1 class="font-heading text-center text-5xl font-bold uppercase">
+              {text?.title}
+            </h1>
+            <Button href="#videos" size="big" class="mt-6">
+              Continue
+              <Icon name="fa7-solid:angle-down" size={24} class="ml-1" />
+            </Button>
+          </div>
+        )
+      }
+    </div>
   </div>
-
-  <!-- Navigation -->
-  <div class="swiper-button-next"></div>
-  <div class="swiper-button-prev"></div>
-
-  <!-- Pagination -->
-  <div class="swiper-pagination"></div>
 </div>
