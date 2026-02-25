@@ -1,0 +1,15 @@
+/* swiper */
+swiper-container,
+.swiper {
+  --swiper-theme-color: theme(--color-white);
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  transition: all 0.2s ease-in-out;
+}
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  opacity: 0.5;
+  transform: scale(1.1);
+}
