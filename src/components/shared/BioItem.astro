@@ -1,0 +1,72 @@
+---
+export interface Props {
+  bio: {
+    title: string;
+    subtitle: string;
+    description: string;
+    image: string;
+    date: string;
+  };
+  index: number;
+  isLast: boolean;
+}
+
+const { bio, index, isLast } = Astro.props;
+const isNormal = index % 2 === 0;
+const isStoryItem = bio.title.includes("Be Part");
+---
+
+<li
+  class="relative mb-12.5 min-h-12.5 last:mb-0 md:mb-25 md:min-h-25 lg:min-h-37.5 xl:min-h-42.5"
+>
+  {/* Image circle */}
+  <div
+    class={`
+    absolute z-10
+    left-0 md:left-1/2 md:-translate-x-1/2
+    w-20 h-20 md:w-25 md:h-25 lg:w-37.5 lg:h-37.5 xl:w-42.5 xl:h-42.5
+    border-4! lg:border-5! xl:border-7! border-primary-hover rounded-full
+    bg-primary 
+    flex items-center justify-center
+    overflow-hidden
+  `}
+  >
+    {
+      isStoryItem ? (
+        <h4 class="font-heading text-center text-[10px] leading-normal font-bold whitespace-pre-line text-white md:text-sm lg:text-base xl:text-lg">
+          {bio.title}
+        </h4>
+      ) : (
+        <img
+          src={bio.image}
+          alt={bio.subtitle}
+          class="absolute top-0 left-0 h-full w-full object-cover"
+          loading="lazy"
+        />
+      )
+    }
+  </div>
+
+  {/* Content panel */}
+  {
+    !isLast && (bio.description || bio.subtitle) && (
+      <div
+        class={`w-full py-0 pr-5 pb-5 pl-25 text-left md:w-[41%] md:pr-5 md:pb-5 md:pl-8 lg:pr-5 lg:pb-5 lg:pl-5 xl:pr-5 xl:pl-15 ${
+          isNormal
+            ? "md:float-left md:text-right"
+            : "md:float-right md:text-left"
+        } `}
+      >
+        <div class="mb-4">
+          <h4 class="font-heading text-2xl font-bold">{bio.title}</h4>
+          {bio.subtitle && (
+            <h4 class="font-sans text-2xl font-light">{bio.subtitle}</h4>
+          )}
+        </div>
+        {bio.description && (
+          <p class="leading-relaxed opacity-70">{bio.description}</p>
+        )}
+      </div>
+    )
+  }
+</li>
