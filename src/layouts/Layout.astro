@@ -12,7 +12,7 @@ const { title, description, image = "/images/cover.png" } = Astro.props;
   <head>
     <BaseHead title={title} description={description} image={image} />
   </head>
-  <body class="dark:bg-slate-950 dark:text-white">
+  <body class="dark:bg-slate-950 dark:text-white" id="top">
     <Navigation />
     <slot />
     <Footer />

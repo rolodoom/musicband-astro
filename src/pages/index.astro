@@ -1,6 +1,6 @@
 ---
 import Layout from "@/layouts/Layout.astro";
-import Masthead from "@/components/sections/Masthead.astro";
+import MastheadSwipe from "@/components/sections/MastheadSwipe.astro";
 import Videos from "@/components/sections/Videos.astro";
 import Releases from "@/components/sections/Releases.astro";
 import Bio from "@/components/sections/Bio.astro";
@@ -18,8 +18,8 @@ const { bandName, description, slogan } = bandData;
   description={description}
   image={image}
 >
-  <main id="home">
-    <Masthead />
+  <main>
+    <MastheadSwipe />
     <Videos />
     <Releases />
     <Bio />
