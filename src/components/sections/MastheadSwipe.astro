@@ -1,0 +1,46 @@
+---
+import { Icon } from "astro-icon/components";
+
+import mastheadSwipeData from "@/data/mastheadSwipe.json";
+import Button from "../ui/Button.astro";
+---
+
+<div class="swiper h-screen" data-aos="fade-in">
+  <div class="swiper-wrapper">
+    {
+      mastheadSwipeData.map((item) => {
+        const { bgImage, title, description, label, icon, url } = item;
+        return (
+          <div
+            class="swiper-slide relative bg-cover bg-center bg-no-repeat"
+            style={{ backgroundImage: `url(/images/masthead/${bgImage})` }}
+          >
+            <div class="from-dark/90 via-dark/50 to-dark/30 absolute inset-0 bg-linear-to-b from-0% via-60% to-100%" />
+
+            <div class="relative z-10 container mx-auto flex h-full w-2/3 flex-col items-center justify-center">
+              <Icon name={icon} size={64} class="mb-2 text-white/60" />
+
+              <h1 class="font-heading mb-4 text-center text-5xl font-bold uppercase xl:text-6xl">
+                {title}
+              </h1>
+              <h2 class="font-heading text-center text-2xl leading-tight font-light xl:text-3xl">
+                {description}
+              </h2>
+              <Button href={url} size="big" class="mt-6">
+                {label}
+                <Icon name="fa7-solid:angle-down" size={16} class="ml-1" />
+              </Button>
+            </div>
+          </div>
+        );
+      })
+    }
+  </div>
+
+  <!-- Navigation -->
+  <div class="swiper-button-next"></div>
+  <div class="swiper-button-prev"></div>
+
+  <!-- Pagination -->
+  <div class="swiper-pagination"></div>
+</div>

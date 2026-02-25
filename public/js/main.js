@@ -20,6 +20,14 @@
     new Swiper(slider, {
       slidesPerView: 1,
       loop: true,
+      autoplay: {
+        delay: 5000,
+      },
+      effect: "coverflow",
+      coverflowEffect: {
+        rotate: 30,
+        slideShadows: false,
+      },
       navigation: {
         nextEl: slider.querySelector(".swiper-button-next"),
         prevEl: slider.querySelector(".swiper-button-prev"),

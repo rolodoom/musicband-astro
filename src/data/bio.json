@@ -1,40 +1,40 @@
 {
   "id": "bio",
-  "title": "Bio",
-  "subtitle": "Aliquet nibh praesent tristique magna sit.",
+  "title": "Our Story",
+  "subtitle": "A peek behind the scenes of our journey and growth.",
   "bios": [
     {
       "title": "2009-2011",
       "subtitle": "Our Humble Beginnings",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!",
+      "description": "We started out in a small garage with second-hand instruments and big dreams. Late nights, lots of coffee, and endless jam sessions defined our early days.",
       "image": "/images/bio/883.jpg",
       "date": "2009-05-06"
     },
     {
       "title": "March 2011",
       "subtitle": "A Band is Born",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!",
+      "description": "After months of practice and a few local gigs, we officially formed the band. Our chemistry clicked, and suddenly, what started as a hobby became our shared passion.",
       "image": "/images/bio/453.jpg",
       "date": "2011-05-06"
     },
     {
       "title": "December 2012",
       "subtitle": "On the Road",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!",
+      "description": "We hit the road for our first tour, traveling in a beat-up van, sleeping on floors, and discovering what it really means to live for music. Every show brought new fans and unforgettable memories.",
       "image": "/images/bio/452.jpg",
       "date": "2012-05-06"
     },
     {
       "title": "July 2014",
       "subtitle": "Into the Studio",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!",
+      "description": "Studio time was a game-changer. Recording our first album pushed us creatively, tested our patience, and taught us how to capture the energy of our live performances in every track.",
       "image": "/images/bio/304.jpg",
       "date": "2014-05-06"
     },
     {
       "title": "Be Part\nOf Our\nStory!",
-      "subtitle": "",
-      "description": "",
+      "subtitle": "Join us on the journey",
+      "description": "We’re still writing new chapters every day. From upcoming shows to new songs, we want you along for every moment. The best is yet to come!",
       "image": "",
       "date": "2015-05-06"
     }

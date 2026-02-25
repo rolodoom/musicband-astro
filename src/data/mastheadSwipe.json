@@ -1,0 +1,50 @@
+[
+  {
+    "bgImage": "10.webp",
+    "title": "Videos",
+    "description": "Take a look at our latest videos and see what we've been up to!",
+    "label": "Watch now",
+    "icon": "fa7-brands:youtube",
+    "url": "#videos"
+  },
+  {
+    "bgImage": "13.webp",
+    "title": "Music",
+    "description": "Explore our music releases and enjoy our favorite tracks!",
+    "label": "Listen all",
+    "icon": "fa7-regular:circle-play",
+    "url": "#releases"
+  },
+  {
+    "bgImage": "16.webp",
+    "title": "Our Story",
+    "description": "Discover our story and journey so far.",
+    "label": "Learn more",
+    "icon": "fa7-solid:book-open",
+    "url": "#bio"
+  },
+  {
+    "bgImage": "17.webp",
+    "title": "The Band",
+    "description": "Meet the talented musicians behind our sound.",
+    "label": "Meet them",
+    "icon": "fa7-solid:microphone",
+    "url": "#musicians"
+  },
+  {
+    "bgImage": "18.webp",
+    "title": "Gallery",
+    "description": "Browse photos from our tours and behind-the-scenes moments.",
+    "label": "Our moments",
+    "icon": "fa7-regular:images",
+    "url": "#gallery"
+  },
+  {
+    "bgImage": "19.webp",
+    "title": "Contact",
+    "description": "We’d love to hear from you! Get in touch with us.",
+    "label": "Get in touch",
+    "icon": "fa7-solid:share-nodes",
+    "url": "#contact"
+  }
+]

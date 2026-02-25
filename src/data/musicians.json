@@ -1,14 +1,14 @@
 {
   "id": "musicians",
-  "title": "Musicians",
-  "subtitle": "Quam elementum pulvinar etiam non quam lacus.",
-  "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.",
+  "title": "The Band",
+  "subtitle": "Get to know the faces behind the music.",
+  "description": "Meet the talented musicians who bring our songs to life. Each one adds their own flavor, making our sound unique and unforgettable.",
   "musicians": [
     {
       "name": "Kay Garland",
       "instrument": "Vocals / Guitar",
       "image": "1.webp",
-      "description": "Sapiente voluptatem delectus nisi fuga vero ratione impedit minus perspiciatis quas vitae nulla, aliquam commodi aspernatur eos esse animi hic blanditiis iusto excepturi tenetur possimus. Saepe id asperiores esse doloremque voluptatem laudantium architecto nesciunt cum! At reprehenderit explicabo ut, adipisci fuga unde! Nihil omnis fugit ratione ut sit et dolores soluta inventore perferendis, natus nostrum dicta aut! Sed maxime doloribus numquam eaque culpa aperiam sequi molestiae molestias facere. Culpa reprehenderit ea, enim inventore libero in dolorum praesentium, expedita pariatur nobis cumque? Aut, libero tenetur!",
+      "description": "Kay Garland is the heart and soul of the band, guiding every song with her powerful vocals and emotive guitar playing. She discovered her love for music as a teenager, writing her first songs in her bedroom and performing at local cafés. Known for her infectious energy and magnetic stage presence, Kay not only leads the band but also inspires the creative process, helping shape the sound and vision of each track. Offstage, she’s a storyteller, often sharing behind-the-scenes anecdotes and personal reflections that connect deeply with fans.",
       "social": [
         { "name": "instagram", "url": "#!" },
         { "name": "twitter", "url": "#!" },
@@ -19,7 +19,7 @@
       "name": "Larry Parker",
       "instrument": "Bass",
       "image": "2.webp",
-      "description": "Sapiente voluptatem delectus nisi fuga vero ratione impedit minus perspiciatis quas vitae nulla, aliquam commodi aspernatur eos esse animi hic blanditiis iusto excepturi tenetur possimus. Saepe id asperiores esse doloremque voluptatem laudantium architecto nesciunt cum! At reprehenderit explicabo ut, adipisci fuga unde! Nihil omnis fugit ratione ut sit et dolores soluta inventore perferendis, natus nostrum dicta aut! Sed maxime doloribus numquam eaque culpa aperiam sequi molestiae molestias facere. Culpa reprehenderit ea, enim inventore libero in dolorum praesentium, expedita pariatur nobis cumque? Aut, libero tenetur!",
+      "description": "Larry Parker anchors the band with his smooth yet commanding basslines. Starting out playing in jazz ensembles, he brings a refined sense of rhythm and groove that blends seamlessly with the band’s energy. Known for his calm demeanor offstage, Larry comes alive behind the bass, often adding unexpected flourishes that give each song its unique character. Beyond his playing, he’s a mentor within the group, helping younger band members refine their technique and navigate the challenges of life on tour.",
       "social": [
         { "name": "instagram", "url": "#!" },
         { "name": "twitter", "url": "#!" },
@@ -30,7 +30,7 @@
       "name": "Nils Petersen",
       "instrument": "Drums",
       "image": "3.webp",
-      "description": "Sapiente voluptatem delectus nisi fuga vero ratione impedit minus perspiciatis quas vitae nulla, aliquam commodi aspernatur eos esse animi hic blanditiis iusto excepturi tenetur possimus. Saepe id asperiores esse doloremque voluptatem laudantium architecto nesciunt cum! At reprehenderit explicabo ut, adipisci fuga unde! Nihil omnis fugit ratione ut sit et dolores soluta inventore perferendis, natus nostrum dicta aut! Sed maxime doloribus numquam eaque culpa aperiam sequi molestiae molestias facere. Culpa reprehenderit ea, enim inventore libero in dolorum praesentium, expedita pariatur nobis cumque? Aut, libero tenetur!",
+      "description": "Nils Petersen is the rhythmic engine of the band, driving each song with precision, power, and creativity. His passion for percussion started in school bands and quickly grew into a career dedicated to exploring the full range of drumming techniques. Whether it’s a subtle jazz-inspired groove or a thunderous rock fill, Nils adapts effortlessly to each song’s needs. Fans love his dynamic live performances, where he combines technical skill with playful showmanship. Offstage, he’s equally creative, often experimenting with new sounds and instruments that push the band’s music in exciting directions.",
       "social": [
         { "name": "instagram", "url": "#!" },
         { "name": "twitter", "url": "#!" },

@@ -1,16 +1,16 @@
 {
   "id": "releases",
   "title": "Music",
-  "subtitle": "In massa tempor nec feugiat nisl pretium.",
+  "subtitle": "Your playlist just got better. Enjoy our tracks.",
   "releases": [
     {
-      "title": "All things New",
-      "subtitle": "All Lorem ipsum dolor sit amet consectetur.",
+      "title": "All Things New",
+      "subtitle": "Our debut experiment in indie soundscapes.",
       "date": "2010-05-06",
       "image": "1.webp",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!",
-      "format": "CD",
-      "label": "Record Label",
+      "description": "‘All Things New’ was our first step into the indie rock world. Recorded in a makeshift home studio, the album captures the raw energy of a band finding its voice, blending jangly guitars with intimate vocals. Tracks like 'Morning Echoes' and 'Fading Lights' became early fan favorites, setting the tone for our musical journey.",
+      "format": "Cassette & Streaming",
+      "label": "Independent Record Company",
       "streaming": [
         { "name": "bandcamp", "url": "#!" },
         { "name": "spotify", "url": "#!" },
@@ -19,12 +19,12 @@
     },
     {
       "title": "Renegade Waves",
-      "subtitle": "Lorem ipsum dolor sit amet consectetur.",
+      "subtitle": "Breaking out with a bolder sound.",
       "date": "2013-06-16",
       "image": "2.webp",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!",
-      "format": "CD",
-      "label": "Record Label",
+      "description": "‘Renegade Waves’ marked a turning point for the band. With edgier riffs and more polished production, it captured our growing confidence and adventurous spirit. Songs like 'Crimson Tide' and 'Neon Streets' resonated with both old fans and new listeners, solidifying our presence on the indie scene.",
+      "format": "CD & Streaming",
+      "label": "Independent Record Company",
       "streaming": [
         { "name": "bandcamp", "url": "#!" },
         { "name": "spotify", "url": "#!" },
@@ -33,12 +33,12 @@
     },
     {
       "title": "Jungle - The Hits",
-      "subtitle": "Lorem ipsum dolor sit amet consectetur.",
+      "subtitle": "A compilation of fan favorites and live essentials.",
       "date": "2015-01-22",
       "image": "3.webp",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!",
-      "format": "CD",
-      "label": "Record Label",
+      "description": "This collection brought together the most beloved tracks from our first two albums, along with a few live recordings that captured the energy of our shows. ‘Jungle - The Hits’ showcases the versatility of the band, from reflective ballads to high-energy anthems, and remains a gateway for new fans to explore our sound.",
+      "format": "Cassette, Vinyl & Streaming",
+      "label": "Awesome Records",
       "streaming": [
         { "name": "bandcamp", "url": "#!" },
         { "name": "spotify", "url": "#!" },
@@ -47,12 +47,12 @@
     },
     {
       "title": "The Alternative",
-      "subtitle": "Lorem ipsum dolor sit amet consectetur.",
+      "subtitle": "Our most experimental and ambitious work yet.",
       "date": "2020-05-06",
       "image": "4.webp",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!",
-      "format": "CD",
-      "label": "Record Label",
+      "description": "‘The Alternative’ pushed the band into new creative territory. Combining electronic textures with our signature guitar-driven sound, the album explores themes of identity, change, and resilience. Critics praised tracks like 'Shifting Sands' and 'Echo Chamber' for their boldness, cementing our reputation as a band unafraid to evolve.",
+      "format": "Cassette, Vinyl & Streaming",
+      "label": "Galaxy Records",
       "streaming": [
         { "name": "bandcamp", "url": "#!" },
         { "name": "spotify", "url": "#!" },
