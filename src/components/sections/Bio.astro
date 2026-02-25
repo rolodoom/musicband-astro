@@ -3,21 +3,6 @@ import BioItem from "@/components/shared/BioItem.astro";
 import Section from "@/components/shared/Section.astro";
 import bioData from "@/data/bio.json";
 
-export interface Props {
-  data: {
-    id: string;
-    title: string;
-    subtitle: string;
-    bios: Array<{
-      title: string;
-      subtitle: string;
-      description: string;
-      image: string;
-      date: string;
-    }>;
-  };
-}
-
 const darkmode = false;
 
 const { id, title, subtitle, bios } = bioData;
