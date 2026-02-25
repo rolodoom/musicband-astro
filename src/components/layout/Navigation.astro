@@ -175,30 +175,39 @@ const { bandName } = bandData;
     // =================================================
     function updateActiveLink() {
       const navHeight = navContainer.offsetHeight;
-
       const sections = [...document.querySelectorAll("section[id]")];
       const navLinks = [
         ...document.querySelectorAll(".nav-link, .mobile-nav-link"),
       ];
-
       const scrollPos = window.scrollY + navHeight + 1;
+      const pageBottom = window.scrollY + window.innerHeight;
 
-      let current = sections.find(
-        (section) =>
-          scrollPos >= section.offsetTop &&
-          scrollPos < section.offsetTop + section.offsetHeight,
-      );
+      let current = null;
 
+      for (let i = 0; i < sections.length; i++) {
+        const section = sections[i];
+
+        // Check if we are past the top of the section
+        if (scrollPos >= section.offsetTop) {
+          current = section;
+        }
+
+        // Special check: if we reach the bottom of the page, always highlight last section
+        if (pageBottom >= document.body.scrollHeight) {
+          current = sections[sections.length - 1];
+        }
+      }
+
+      // Reset all links
       navLinks.forEach((link) => {
         link.classList.remove("text-primary");
-
         if (link.classList.contains("nav-link"))
           link.classList.add("text-gray-300");
-
         if (link.classList.contains("mobile-nav-link"))
           link.classList.add("text-gray-400");
       });
 
+      // Highlight current
       if (current) {
         navLinks.forEach((link) => {
           if (link.dataset.section === current.id) {
