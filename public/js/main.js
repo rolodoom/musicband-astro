@@ -1,7 +1,15 @@
-import Swiper from "swiper";
-import { Navigation, Pagination } from "swiper/modules";
+(function () {
+  AOS.init({
+    // once: true,
+    duration: 800,
+  });
+})();
 
-export function initSwipers() {
+(function () {
+  Fancybox.bind("[data-fancybox]");
+})();
+
+(function () {
   const sliders = document.querySelectorAll(".swiper");
 
   sliders.forEach((slider) => {
@@ -10,7 +18,6 @@ export function initSwipers() {
     }
 
     new Swiper(slider, {
-      modules: [Navigation, Pagination],
       slidesPerView: 1,
       loop: true,
       navigation: {
@@ -23,4 +30,4 @@ export function initSwipers() {
       },
     });
   });
-}
+})();

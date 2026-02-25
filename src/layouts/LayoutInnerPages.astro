@@ -1,4 +1,5 @@
 ---
+import BaseScripts from "@/components/layout/BaseScripts.astro";
 import { SITE_CONFIG } from "@/config/site";
 
 import BaseHead from "@components/layout/BaseHead.astro";
@@ -11,5 +12,6 @@ const { title, description, image = "/images/cover.png" } = Astro.props;
   </head>
   <body class="dark:bg-slate-950 dark:text-white">
     <slot />
+    <BaseScripts />
   </body>
 </html>
