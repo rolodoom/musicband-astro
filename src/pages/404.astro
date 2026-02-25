@@ -2,7 +2,6 @@
 import Section from "@/components/shared/Section.astro";
 import LayoutInnerPages from "../layouts/LayoutInnerPages.astro";
 import Button from "@/components/ui/Button.astro";
-import Footer from "@/components/layout/Footer.astro";
 import { Icon } from "astro-icon/components";
 ---
 
@@ -13,7 +12,10 @@ import { Icon } from "astro-icon/components";
     id="404"
     darkmode
     fullHeight
-    bgColor="bg-slate-950"
+    bgColor="bg-primary"
+    overlayOpacity={0.8}
+    overlayColor="#01161e"
+    bgImage="/images/masthead/header-bg.webp"
   >
     <Button href="/"
       ><Icon name="fa7-solid:arrow-left" size={16} class="mr-1" />Go Back</Button

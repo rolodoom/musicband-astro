@@ -9,15 +9,10 @@ import Contact from "@/components/sections/Contact.astro";
 import Gallery from "@/components/sections/Gallery.astro";
 
 import bandData from "@/data/band.json";
-const image = "/images/cover.png";
 const { bandName, description, slogan } = bandData;
 ---
 
-<Layout
-  title={`${bandName} - ${slogan}`}
-  description={description}
-  image={image}
->
+<Layout title={`${bandName} - ${slogan}`} description={description}>
   <main>
     <Masthead />
     <Videos />
