@@ -18,15 +18,23 @@ export interface Props {
   };
 }
 
+const darkmode = false;
+
 const { id, title, subtitle, bios } = bioData;
+const lineColor = darkmode ? "before:bg-white" : "before:bg-primary";
 ---
 
-<Section title={title} subtitle={subtitle} id={id}>
+<Section title={title} subtitle={subtitle} id={id} darkmode={darkmode}>
   <div class="mx-auto max-w-7xl">
-    <ul class="timeline">
+    <ul class={`timeline ${lineColor}`}>
       {
         bios.map((bio, index) => (
-          <BioItem bio={bio} index={index} isLast={index === bios.length - 1} />
+          <BioItem
+            bio={bio}
+            index={index}
+            isLast={index === bios.length - 1}
+            darkmode={darkmode}
+          />
         ))
       }
     </ul>

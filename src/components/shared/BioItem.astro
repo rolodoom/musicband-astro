@@ -9,15 +9,19 @@ export interface Props {
   };
   index: number;
   isLast: boolean;
+  darkmode?: boolean;
 }
 
-const { bio, index, isLast } = Astro.props;
+const { bio, index, isLast, darkmode } = Astro.props;
 const isOdd = index % 2 === 1;
+
+const borderCircleColor = darkmode ? "border-white" : "border-primary-hover";
+const bgCircleColor = darkmode ? "bg-dark" : "bg-primary";
 ---
 
 <li class={`${isOdd && "timeline-inverted"}`}>
   <div
-    class="timeline-image bg-primary border-primary-hover flex items-center justify-center rounded-full border-4! text-white md:border-6! lg:border-7!"
+    class={`timeline-image ${bgCircleColor} ${borderCircleColor} flex items-center justify-center rounded-full border-4! text-white md:border-6! lg:border-7!`}
     data-aos="flip-left"
   >
     {
