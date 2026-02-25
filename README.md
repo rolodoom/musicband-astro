@@ -10,6 +10,13 @@ MusicBandAstro is an **SEO-ready one-page** template for musicians, built with *
 
 [![GitHub license](https://img.shields.io/badge/license-GPL--3.0-blue)](https://raw.githubusercontent.com/rolodoom/musicband-astro/master/LICENSE)
 
+## ✨ Features
+
+- SEO-ready and performance optimized.
+- Responsive, works on all devices.
+- Built with Astro + Tailwind CSS for maximum flexibility.
+- Easy to customize and extend to fit your needs.
+
 ## 🚀 Getting Started
 
 1. Create a new project using this template:
@@ -79,4 +86,4 @@ Have a bug or an issue with this template? [Open a new issue](https://github.com
 
 ## 📝 License
 
-This code is released under the [GPL-3.0](https://github.com/rolodoom/musicband-astro/master/LICENSE) license, which means you have the four freedoms to run, study, share, and modify the software. Any derivative work must be distributed under the same or equivalent license terms.
+This code is released under the [GPL-3.0](https://raw.githubusercontent.com/rolodoom/musicband-astro/master/LICENSE) license, which means you have the four freedoms to run, study, share, and modify the software. Any derivative work must be distributed under the same or equivalent license terms.
