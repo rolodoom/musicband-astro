@@ -32,7 +32,7 @@ const isHexColor = finalBgColor?.startsWith("#");
 const bgStyle = isHexColor ? { backgroundColor: finalBgColor } : {};
 const bgClass = !isHexColor && !bgImage ? finalBgColor : "";
 
-const heightClass = fullHeight ? "min-h-screen" : "min-h-[calc(100vh-130px)]";
+const heightClass = fullHeight ? "min-h-screen" : "min-h-[50vh]";
 
 const titleColor = darkmode ? "text-white" : "text-slate-800";
 const subtitleColor = darkmode ? "text-gray-100" : "text-gray-700";
