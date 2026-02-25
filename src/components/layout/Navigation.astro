@@ -225,19 +225,26 @@ const { bandName } = bandData;
     function initSmoothScroll() {
       const navHeight = () => navContainer.offsetHeight;
 
-      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-        anchor.addEventListener("click", (e) => {
-          const target = document.querySelector(anchor.getAttribute("href"));
-          if (!target) return;
+      document.body.addEventListener("click", (e) => {
+        const anchor = e.target.closest('a[href^="#"]');
+        if (!anchor) return;
+        const target = document.querySelector(anchor.getAttribute("href"));
+        if (!target) return;
 
-          e.preventDefault();
+        e.preventDefault();
 
-          const offset =
-            target.getBoundingClientRect().top + window.scrollY - navHeight();
+        const offset =
+          target.getBoundingClientRect().top +
+          window.scrollY -
+          navContainer.offsetHeight;
 
-          window.scrollTo({ top: offset, behavior: "smooth" });
-          closeMenu();
-        });
+        window.scrollTo({ top: offset, behavior: "smooth" });
+
+        // Close mobile menu if open
+        if (typeof closeMenu === "function") closeMenu();
+
+        // Optional: update URL hash without jumping
+        window.history.pushState(null, "", anchor.getAttribute("href"));
       });
     }
 
