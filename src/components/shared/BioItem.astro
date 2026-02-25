@@ -12,60 +12,42 @@ export interface Props {
 }
 
 const { bio, index, isLast } = Astro.props;
-const isNormal = index % 2 === 0;
-const isStoryItem = bio.title.includes("Be Part");
+const isOdd = index % 2 === 1;
 ---
 
-<li
-  class="relative mb-12.5 min-h-12.5 last:mb-0 md:mb-25 md:min-h-25 lg:min-h-37.5 xl:min-h-42.5"
->
-  {/* Image circle */}
+<li class={`${isOdd && "timeline-inverted"}`}>
   <div
-    class={`
-    absolute z-10
-    left-0 md:left-1/2 md:-translate-x-1/2
-    w-20 h-20 md:w-25 md:h-25 lg:w-37.5 lg:h-37.5 xl:w-42.5 xl:h-42.5
-    border-4! lg:border-5! xl:border-7! border-primary-hover rounded-full
-    bg-primary 
-    flex items-center justify-center
-    overflow-hidden
-  `}
+    class="timeline-image bg-primary border-primary-hover flex items-center justify-center rounded-full border-4! text-white md:border-6! lg:border-7!"
+    data-aos="flip-left"
   >
     {
-      isStoryItem ? (
-        <h4 class="font-heading text-center text-[10px] leading-normal font-bold whitespace-pre-line text-white md:text-sm lg:text-base xl:text-lg">
-          {bio.title}
-        </h4>
-      ) : (
+      !isLast ? (
         <img
+          class="aspect-square h-full w-full rounded-full object-cover"
           src={bio.image}
-          alt={bio.subtitle}
-          class="absolute top-0 left-0 h-full w-full object-cover"
-          loading="lazy"
+          alt={bio.title}
         />
+      ) : (
+        <h3 class="font-heading text-xs font-bold whitespace-pre-line md:text-sm xl:text-lg">
+          {bio.title}
+        </h3>
       )
     }
   </div>
-
-  {/* Content panel */}
   {
-    !isLast && (bio.description || bio.subtitle) && (
-      <div
-        class={`w-full py-0 pr-5 pb-5 pl-25 text-left md:w-[41%] md:pr-5 md:pb-5 md:pl-8 lg:pr-5 lg:pb-5 lg:pl-5 xl:pr-5 xl:pl-15 ${
-          isNormal
-            ? "md:float-left md:text-right"
-            : "md:float-right md:text-left"
-        } `}
-      >
-        <div class="mb-4">
-          <h4 class="font-heading text-2xl font-bold">{bio.title}</h4>
-          {bio.subtitle && (
-            <h4 class="font-sans text-2xl font-light">{bio.subtitle}</h4>
-          )}
+    !isLast && (
+      <div class="timeline-panel" data-aos="fade-up">
+        <div class="timeline-heading">
+          <h3 class="font-heading mb-1 text-2xl font-bold">{bio.title}</h3>
+          <h4 class="font-heading mb-2.5 text-xl font-normal">
+            {bio.subtitle}
+          </h4>
         </div>
-        {bio.description && (
-          <p class="leading-relaxed opacity-70">{bio.description}</p>
-        )}
+        <div class="timeline-body">
+          <p class="leading-relaxed whitespace-pre-line opacity-80">
+            {bio.description}
+          </p>
+        </div>
       </div>
     )
   }

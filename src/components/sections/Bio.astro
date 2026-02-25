@@ -23,7 +23,7 @@ const { id, title, subtitle, bios } = bioData;
 
 <Section title={title} subtitle={subtitle} id={id}>
   <div class="mx-auto max-w-7xl">
-    <ul class="timeline-list bg relative mx-auto">
+    <ul class="timeline">
       {
         bios.map((bio, index) => (
           <BioItem bio={bio} index={index} isLast={index === bios.length - 1} />
@@ -32,22 +32,3 @@ const { id, title, subtitle, bios } = bioData;
     </ul>
   </div>
 </Section>
-
-<style>
-  .timeline-list:before {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 40px;
-    width: 2px;
-    content: "";
-    background-color: var(--color-primary);
-  }
-
-  @media (min-width: 768px) {
-    .timeline-list:before {
-      left: 50%;
-      transform: translateX(-50%);
-    }
-  }
-</style>
