@@ -1,17 +1,20 @@
 {
-  "bandName": "MusicBand",
-  "slogan": "A musician page theme",
-  "description": "A musician page theme",
+  "bandName": "MusicBandAstro",
+  "slogan": "SEO-ready one-page musician template",
+  "description": "MusicBandAstro is an SEO-ready one-page template for musicians, built with Astro and Tailwind CSS. Includes sections for Videos, Music, Our Story, The Band, Gallery, and Contact.",
   "logo": "/images/navbar-logo.svg",
+  "navBarlogo": "/images/navbar-logo.svg",
   "press": [
     { "name": "Rider [1.2 MiB]", "url": "#!.pdf", "variant": "secondary" },
     { "name": "Brochure [350 KiB]", "url": "#!.pdf" },
     { "name": "Photos [5.2 MiB]", "url": "#!.zip" }
   ],
   "social": [
-    { "name": "instagram", "url": "#!" },
-    { "name": "twitter", "url": "#!" },
-    { "name": "facebook", "url": "#!" }
+    { "name": "instagram", "url": "https://www.instagram.com/musicbandastro" },
+    { "name": "facebook", "url": "https://www.facebook.com/musicbandastro" },
+    { "name": "tiktok", "url": "https://www.tiktok.com/@musicbandastro" },
+    { "name": "youtube", "url": "https://www.youtube.com/@musicbandastro" },
+    { "name": "twitter", "url": "https://twitter.com/musicbandastro" }
   ],
   "streaming": [
     { "name": "bandcamp", "url": "#!" },
