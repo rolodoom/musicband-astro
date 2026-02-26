@@ -15,14 +15,18 @@ const slug = slugify(musician.name);
 <Modal id={`modal-${slug}`} size="full" class="custom-modal">
   <ModalBody>
     <div class="mx-auto max-w-4xl py-12">
-      <header class="heading mb-10 flex flex-col items-start gap-2">
+      <header
+        class="heading mb-10 flex flex-col items-center gap-2 md:items-start"
+      >
         <h1 class="font-heading text-5xl font-extrabold uppercase">
           {name}
         </h1>
         <h2 class="font-serif text-xl italic">{instrument}</h2>
       </header>
-      <article class="mt-6 flex gap-12">
-        <div class="flex w-1/3 flex-col gap-6">
+      <article
+        class="mt-6 flex flex-wrap justify-center gap-12 md:flex-nowrap md:justify-start"
+      >
+        <div class="flex w-100 flex-col gap-6 md:w-1/3">
           <a
             href={`/images/musicians/${image}`}
             data-fancybox
@@ -43,9 +47,12 @@ const slug = slugify(musician.name);
             </div>
           </a>
 
-          <SocialIcons social={social} />
+          <SocialIcons
+            social={social}
+            class="items-center justify-center gap-2"
+          />
         </div>
-        <div class="flex w-2/3 flex-col gap-7 text-left font-serif">
+        <div class="flex w-100 flex-col gap-7 text-left font-serif md:w-2/3">
           <div set:html={description} class="prose prose-slate" />
           <Button type="button" data-modal-close class="self-start"
             ><Icon name="fa7-solid:xmark" size={16} class="mr-1" />Close</Button

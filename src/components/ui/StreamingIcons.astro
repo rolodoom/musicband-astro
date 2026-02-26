@@ -6,10 +6,10 @@ import { toTitleCase } from "@/utils/format";
 const { streaming } = Astro.props;
 ---
 
-<div class="flex flex-wrap items-center gap-3 pt-6">
+<div class="flex flex-wrap items-center justify-center gap-3 md:justify-start">
   {
     streaming.map((item: any) => (
-      <Button href={item.url}>
+      <Button href={item.url} class="w-full md:w-auto">
         <Icon name={`fa7-brands:${item.name}`} size={20} class="mr-0.5" />
         <span>{toTitleCase(item.name)}</span>
       </Button>

@@ -18,7 +18,7 @@ const sortedReleases = getSortedItems(releases);
   <div class="container mx-auto flex w-full flex-wrap justify-center">
     {
       sortedReleases.map((release, index: number) => (
-        <div class="mb-4 w-full px-6 sm:w-1/2 sm:px-3 lg:w-1/4 xl:w-1/4">
+        <div class="mb-12 w-full px-6 sm:w-1/2 sm:px-3 md:mb-4 lg:w-1/4 xl:w-1/4">
           <ReleaseItem release={release} index={index} />
         </div>
       ))
