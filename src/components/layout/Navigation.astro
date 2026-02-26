@@ -5,7 +5,7 @@ import bandData from "@/data/band.json";
 import { Icon } from "astro-icon/components";
 
 const { navItems } = navigationData;
-const { bandName } = bandData;
+const { bandName, navBarlogo } = bandData;
 ---
 
 <nav
@@ -20,7 +20,7 @@ const { bandName } = bandData;
       <!-- Logo -->
       <a href="#top" class="transition-all duration-300">
         <img
-          src="/images/navbar-logo.svg"
+          src={navBarlogo}
           alt={bandName}
           id="logoImg"
           class="h-8 transition-all duration-300"
