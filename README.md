@@ -17,10 +17,16 @@ MusicBandAstro is an **SEO-ready one-page** template for musicians, built with *
 
 ## ✨ Features
 
+## Key features
+
 - SEO-ready and performance optimized.
 - Responsive, works on all devices.
 - Built with Astro + Tailwind CSS for maximum flexibility.
 - Easy to customize and extend to fit your needs.
+- Two main components: `<Masthead />` and `<MastheadSwipe />`. Each has its own route: [`index.astro`](https://musicband-astro.netlify.app/) and [`swipe.astro`](https://musicband-astro.netlify.app/swipe) so you can view them separately and choose which one you prefer.
+- Gallery with lightbox support for easy image viewing.
+- Smooth animations for interactive elements.
+- Modal dialogs for displaying additional information.
 
 ## 🚀 Getting Started
 

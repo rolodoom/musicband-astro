@@ -1,0 +1,25 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import MastheadSwipe from "@/components/sections/MastheadSwipe.astro";
+import Videos from "@/components/sections/Videos.astro";
+import Releases from "@/components/sections/Releases.astro";
+import Bio from "@/components/sections/Bio.astro";
+import Musicians from "@/components/sections/Musicians.astro";
+import Contact from "@/components/sections/Contact.astro";
+import Gallery from "@/components/sections/Gallery.astro";
+
+import bandData from "@/data/band.json";
+const { bandName, description, slogan } = bandData;
+---
+
+<Layout title={`${bandName} - ${slogan}`} description={description}>
+  <main>
+    <MastheadSwipe />
+    <Videos />
+    <Releases />
+    <Bio />
+    <Musicians />
+    <Gallery />
+    <Contact />
+  </main>
+</Layout>
