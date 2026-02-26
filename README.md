@@ -9,6 +9,7 @@ MusicBandAstro is an **SEO-ready one-page** template for musicians, built with *
 ## Status
 
 [![GitHub license](https://img.shields.io/badge/license-GPL--3.0-blue)](https://raw.githubusercontent.com/rolodoom/musicband-astro/master/LICENSE)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/fff377e0-d38c-488f-8db2-b2ee25dbdc23/deploy-status)](https://app.netlify.com/projects/musicband-astro/deploys)
 
 ## ✨ Features
 
