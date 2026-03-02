@@ -14,7 +14,7 @@ const { title, description, image = bandData.og_image } = Astro.props;
   <head>
     <BaseHead title={title} description={description} image={image} />
   </head>
-  <body class="dark:bg-slate-950 dark:text-white" id="top">
+  <body id="top">
     <Navigation />
     <slot />
     <Footer />
