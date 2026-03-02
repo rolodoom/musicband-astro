@@ -9,10 +9,12 @@ const formattedDate = formatDate(video.date);
 <>
   <a
     href={`https://www.youtube.com/watch?v=${video.id}`}
-    data-fancybox
     data-aos="fade-up"
     data-aos-delay={index * 100}
     class="group relative block overflow-hidden"
+    {...video.fancybox === false
+      ? { target: "_blank", rel: "noopener noreferrer" }
+      : { "data-fancybox": "" }}
   >
     <img
       src={getYouTubeThumbnailUrl(video.id)}
