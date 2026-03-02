@@ -54,7 +54,10 @@ const slug = slugify(release.title);
           </a>
         </div>
         <div class="flex w-100 flex-col gap-7 text-left font-serif md:w-1/2">
-          <div set:html={description} class="prose prose-slate" />
+          <div
+            set:html={description}
+            class="prose prose-slate prose-h3:text-xl prose-h3:font-light prose-h3:mb-8 prose-h4:text-xl prose-h4:font-heading"
+          />
 
           <StreamingIcons streaming={release.streaming} />
 
