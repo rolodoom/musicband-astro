@@ -2,6 +2,7 @@
   "bandName": "MusicBandAstro",
   "slogan": "SEO-ready one-page musician template",
   "description": "MusicBandAstro is an SEO-ready one-page template for musicians, built with Astro and Tailwind CSS. Includes sections for Videos, Music, Our Story, The Band, Gallery, and Contact.",
+  "og_image": "/images/og_image.png",
   "logo": "/images/navbar-logo.svg",
   "navBarlogo": "/images/navbar-logo.svg",
   "press": [

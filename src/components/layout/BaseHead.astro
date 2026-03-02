@@ -7,7 +7,9 @@ interface Props {
   image?: string;
 }
 
-const { title, description, image = "/images/og_image.png" } = Astro.props;
+import bandData from "@/data/band.json";
+
+const { title, description, image = bandData.og_image } = Astro.props;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 ---
 

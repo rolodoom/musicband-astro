@@ -5,7 +5,9 @@ import Navigation from "@/components/layout/Navigation.astro";
 import BaseHead from "@/components/layout/BaseHead.astro";
 import Footer from "@/components/layout/Footer.astro";
 
-const { title, description, image = "/images/og_image.png" } = Astro.props;
+import bandData from "@/data/band.json";
+
+const { title, description, image = bandData.og_image } = Astro.props;
 ---
 
 <html lang={SITE_CONFIG.locale}>
