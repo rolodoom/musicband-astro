@@ -1,5 +1,6 @@
 ---
 import bandData from "@/data/band.json";
+import contactData from "@/data/contact.json";
 
 import { getFileExtension, getIconId } from "@/utils/format";
 
@@ -9,15 +10,18 @@ import Button from "@/components/ui/Button.astro";
 import { Icon } from "astro-icon/components";
 
 const { social, press } = bandData;
+const { id, title, subtitle, bgImage, overlayOpacity, overlayColor, darkmode } =
+  contactData;
 ---
 
 <Section
-  title="Contact"
-  subtitle="Questions, collaborations, or just saying hi—reach out!"
-  id="contact"
-  bgImage="/images/bg-contact.webp"
-  overlayOpacity={0.7}
-  darkmode
+  title={title}
+  subtitle={subtitle}
+  id={id}
+  bgImage={bgImage}
+  overlayOpacity={Number(overlayOpacity)}
+  overlayColor={overlayColor}
+  darkmode={darkmode}
 >
   <div class="flex flex-wrap justify-center gap-4 pb-16" data-aos="fade-down">
     {

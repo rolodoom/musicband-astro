@@ -1,0 +1,9 @@
+{
+  "id": "contact",
+  "title": "Contact",
+  "subtitle": "Questions, collaborations, or just saying hi—reach out!",
+  "bgImage": "/images/bg-contact.webp",
+  "overlayOpacity": 0.6,
+  "overlayColor": "#01161e",
+  "darkmode": true
+}
