@@ -40,5 +40,9 @@ const xlWidth = musicians.length > 3 ? "xl:w-1/4" : "xl:w-1/3";
     }
   </div>
 
-  {musicians.map((musician) => <MusicianModal musician={musician} />)}
+  {
+    musicians
+      .filter((musician) => musician.description?.trim().length > 0)
+      .map((musician) => <MusicianModal musician={musician} />)
+  }
 </Section>
