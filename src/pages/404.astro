@@ -3,8 +3,8 @@ import Section from "@/components/shared/Section.astro";
 import LayoutInnerPages from "../layouts/LayoutInnerPages.astro";
 import Button from "@/components/ui/Button.astro";
 import { Icon } from "astro-icon/components";
-
 import sectionData from "@/data/error404.json";
+import { t } from "@/i18n";
 
 const { id, title, subtitle, description = "", config = {} } = sectionData;
 ---
@@ -22,7 +22,9 @@ const { id, title, subtitle, description = "", config = {} } = sectionData;
       )
     }
     <Button href="/"
-      ><Icon name="fa7-solid:arrow-left" size={16} class="mr-1" />Go Back</Button
+      ><Icon name="fa7-solid:arrow-left" size={16} class="mr-1" />{
+        t("goback")
+      }</Button
     >
   </Section>
 </LayoutInnerPages>
