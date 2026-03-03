@@ -5,6 +5,7 @@ import { slugify } from "@/utils/format";
 import { Icon } from "astro-icon/components";
 import StreamingIcons from "../ui/StreamingIcons.astro";
 import SocialIcons from "../ui/SocialIcons.astro";
+import { t } from "@/i18n";
 
 const { musician } = Astro.props;
 
@@ -55,7 +56,9 @@ const slug = slugify(musician.name);
         <div class="flex w-100 flex-col gap-7 text-left font-serif md:w-2/3">
           <div set:html={description} class="prose prose-slate" />
           <Button type="button" data-modal-close class="self-start"
-            ><Icon name="fa7-solid:xmark" size={16} class="mr-1" />Close</Button
+            ><Icon name="fa7-solid:xmark" size={16} class="mr-1" />{
+              t("close")
+            }</Button
           >
         </div>
       </article>

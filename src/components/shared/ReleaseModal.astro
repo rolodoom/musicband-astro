@@ -5,6 +5,7 @@ import { formatDate } from "@/utils/format";
 import { slugify } from "@/utils/format";
 import { Icon } from "astro-icon/components";
 import StreamingIcons from "../ui/StreamingIcons.astro";
+import { t } from "@/i18n";
 
 const { release } = Astro.props;
 
@@ -62,13 +63,15 @@ const slug = slugify(release.title);
           <StreamingIcons streaming={release.streaming} />
 
           <ul>
-            <li><strong>Released:</strong> {formattedDate}</li>
-            <li><strong>Label:</strong> {label}</li>
-            <li><strong>Format:</strong> {format}</li>
+            <li><strong>{t("released")}:</strong> {formattedDate}</li>
+            <li><strong>{t("label")}:</strong> {label}</li>
+            <li><strong>{t("format")}:</strong> {format}</li>
           </ul>
 
           <Button type="button" data-modal-close class="self-start"
-            ><Icon name="fa7-solid:xmark" size={16} class="mr-1" />Close</Button
+            ><Icon name="fa7-solid:xmark" size={16} class="mr-1" />{
+              t("close")
+            }</Button
           >
         </div>
       </article>
