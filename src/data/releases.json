@@ -4,8 +4,9 @@
   "subtitle": "Your playlist just got better. Enjoy our tracks.",
   "description": "",
   "config": {
-    "bgImage": "/images/masthead/16.webp",
-    "darkmode": true
+    "darkmode": true,
+    "bgImage": "/images/gallery/1065.webp",
+    "overlayOpacity": 0.9
   },
   "releases": [
     {
