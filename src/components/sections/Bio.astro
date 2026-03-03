@@ -3,16 +3,14 @@ import BioItem from "@/components/shared/BioItem.astro";
 import Section from "@/components/shared/Section.astro";
 import sectionData from "@/data/bio.json";
 
-const darkmode = false;
+const { id, title, subtitle, description = "", config, bios } = sectionData;
 
-const {
-  id,
-  title,
-  subtitle,
-  description = "",
-  config = {},
-  bios,
-} = sectionData;
+// Allow dynamic keys on config (JSON import is inferred as `{}` by TS)
+const safeConfig = config as typeof config & Record<string, unknown>;
+
+const darkmode =
+  typeof safeConfig.darkmode === "boolean" ? safeConfig.darkmode : false;
+
 const lineColor = darkmode ? "before:bg-white" : "before:bg-primary";
 ---
 
