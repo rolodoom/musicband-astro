@@ -1,6 +1,6 @@
 ---
 import bandData from "@/data/band.json";
-import contactData from "@/data/contact.json";
+import sectionData from "@/data/contact.json";
 
 import { getFileExtension, getIconId } from "@/utils/format";
 
@@ -10,19 +10,10 @@ import Button from "@/components/ui/Button.astro";
 import { Icon } from "astro-icon/components";
 
 const { social, press } = bandData;
-const { id, title, subtitle, bgImage, overlayOpacity, overlayColor, darkmode } =
-  contactData;
+const { id, title, subtitle, description = "", config = {} } = sectionData;
 ---
 
-<Section
-  title={title}
-  subtitle={subtitle}
-  id={id}
-  bgImage={bgImage}
-  overlayOpacity={Number(overlayOpacity)}
-  overlayColor={overlayColor}
-  darkmode={darkmode}
->
+<Section {id} {title} {subtitle} {config}>
   <div class="flex flex-wrap justify-center gap-4 pb-16" data-aos="fade-down">
     {
       press.length > 0 &&
@@ -39,5 +30,16 @@ const { id, title, subtitle, bgImage, overlayOpacity, overlayColor, darkmode } =
         })
     }
   </div>
+
   <SocialIcons social={social} variant="dark" size="big" />
+  {
+    description !== "" && (
+      <div
+        class="mx-auto max-w-3xl pt-16 text-xl font-light"
+        data-aos="fade-down"
+      >
+        {description}
+      </div>
+    )
+  }
 </Section>

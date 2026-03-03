@@ -1,81 +1,79 @@
 ---
-interface Props {
+export interface Props {
   id: string;
   title: string;
-  subtitle?: string;
-  bgImage?: string;
-  bgColor?: string;
-  overlayColor?: string;
-  overlayOpacity?: number;
-  darkmode?: boolean;
-  fullHeight?: boolean;
-  enableAnimation?: boolean; // New prop to control AOS
+  subtitle: string;
+  config?: Record<string, any>;
 }
 
-const {
-  id,
-  title,
-  subtitle,
-  bgImage,
-  bgColor,
-  overlayColor = "#01161e",
-  overlayOpacity = 0.5,
-  darkmode = false,
-  fullHeight = false,
-  enableAnimation = true, // Default to true for backward compatibility
-} = Astro.props;
+const { id, title, subtitle, config = {} } = Astro.props;
 
+// Determine final background color or class
 const finalBgColor =
-  bgColor !== undefined ? bgColor : darkmode ? "bg-dark" : "bg-slate-300";
+  config?.bgColor !== undefined
+    ? config.bgColor
+    : config?.darkmode
+      ? "bg-dark"
+      : "bg-slate-300";
 
-const isHexColor = finalBgColor?.startsWith("#");
+// Check if it's a hex color
+const isHexColor = finalBgColor.startsWith("#");
+
+// bgStyle for inline style if hex
 const bgStyle = isHexColor ? { backgroundColor: finalBgColor } : {};
-const bgClass = !isHexColor && !bgImage ? finalBgColor : "";
 
-const heightClass = fullHeight ? "min-h-screen" : "min-h-[50vh]";
+// bgClass for Tailwind class if not hex and no bgImage
+const bgClass = !isHexColor && !config?.bgImage ? finalBgColor : "";
 
-const titleColor = darkmode ? "text-white" : "text-slate-800";
-const subtitleColor = darkmode ? "text-gray-100" : "text-gray-700";
-const textColor = darkmode ? "text-white" : "text-gray-800";
+// Height class
+const heightClass = config?.fullHeight ? "min-h-screen" : "min-h-[50vh]";
+
+const titleColor = config?.darkmode ? "text-white" : "text-slate-800";
+const subtitleColor = config?.darkmode ? "text-gray-100" : "text-gray-700";
+const textColor = config?.darkmode ? "text-white" : "text-gray-800";
+
+const overlayOpacity = config?.overlayOpacity ? config?.overlayOpacity : 0.7;
 
 // AOS attributes - only add if enabled
-const aosAttributes = enableAnimation
-  ? { "data-aos": "fade-up" }
-  : { "data-aos": "fade-in" };
+const aosAttributes =
+  config?.enableAnimation === false
+    ? {} // no aos attributes
+    : { "data-aos": "fade-in" }; // default if enabled or false is passed
 const titleAosAttributes = { "data-aos": "fade-down" };
 const subtitleAosAttributes = { "data-aos": "fade-up" };
+
+const sectionStyle = {
+  ...(isHexColor ? { backgroundColor: finalBgColor } : {}),
+  ...(config?.bgImage
+    ? {
+        backgroundImage: `url(${config.bgImage})`,
+        backgroundAttachment: "fixed",
+      }
+    : {}),
+};
+
+const sectionClass = config?.bgImage ? "bg-cover bg-center" : "";
 ---
 
-<section id={id}>
+<section id={id} style={sectionStyle} class={`${sectionClass}`}>
   <div
+    class={`relative flex w-full items-center justify-center py-20 ${heightClass} ${bgClass}`}
     {...aosAttributes}
-    class={`relative flex w-full items-center justify-center overflow-hidden py-20 ${heightClass} ${bgClass}`}
-    style={bgStyle}
   >
-    <!-- Background Image -->
-    {
-      bgImage && (
-        <div
-          class="absolute inset-0 -z-20"
-          style={{
-            backgroundImage: `url(${bgImage})`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            backgroundRepeat: "no-repeat",
-          }}
-        />
-      )
-    }
-
     <!-- Overlay -->
     {
-      bgImage && (
+      config?.bgImage && (
         <div
-          class="absolute inset-0 -z-10"
-          style={{
-            backgroundColor: overlayColor,
-            opacity: overlayOpacity,
-          }}
+          class={
+            !isHexColor
+              ? `${finalBgColor} absolute inset-0 z-9`
+              : "absolute inset-0 z-9"
+          }
+          style={
+            isHexColor
+              ? { backgroundColor: finalBgColor, opacity: overlayOpacity }
+              : { opacity: overlayOpacity }
+          }
         />
       )
     }

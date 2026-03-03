@@ -2,6 +2,11 @@
   "id": "releases",
   "title": "Music",
   "subtitle": "Your playlist just got better. Enjoy our tracks.",
+  "description": "",
+  "config": {
+    "bgImage": "/images/masthead/16.webp",
+    "darkmode": true
+  },
   "releases": [
     {
       "title": "All Things New",

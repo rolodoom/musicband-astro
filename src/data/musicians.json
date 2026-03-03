@@ -3,6 +3,7 @@
   "title": "The Band",
   "subtitle": "Get to know the faces behind the music.",
   "description": "Meet the talented musicians who bring our songs to life. Each one adds their own flavor, making our sound unique and unforgettable.",
+  "config": {},
   "musicians": [
     {
       "name": "Kay Garland",

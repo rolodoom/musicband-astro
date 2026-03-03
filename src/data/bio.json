@@ -2,6 +2,8 @@
   "id": "bio",
   "title": "Our Story",
   "subtitle": "A peek behind the scenes of our journey and growth.",
+  "description": "",
+  "config": {},
   "bios": [
     {
       "title": "2009-2011",

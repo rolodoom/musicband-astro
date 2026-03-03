@@ -1,15 +1,23 @@
 ---
 import Section from "@/components/shared/Section.astro";
 import VideoItem from "@/components/shared/VideoItem.astro";
-import videosData from "@/data/videos.json";
+import sectionData from "@/data/videos.json";
 import { getLatestItem, getSortedItemsWithoutLatest } from "@/utils/filter";
 
-const { id, title, subtitle, videos } = videosData;
+const {
+  id,
+  title,
+  subtitle,
+  videos,
+  description = "",
+  config = {},
+} = sectionData;
+
 const latestVideo = getLatestItem(videos);
 const sortedVideos = getSortedItemsWithoutLatest(videos);
 ---
 
-<Section title={title} subtitle={subtitle} id={id} bgColor="bg-slate-100">
+<Section {id} {title} {subtitle} {config}>
   <div class="mx-auto max-w-5xl px-3 pb-12 md:pb-4 lg:pb-6 xl:pb-12">
     <VideoItem video={latestVideo} />
   </div>
@@ -22,4 +30,14 @@ const sortedVideos = getSortedItemsWithoutLatest(videos);
       ))
     }
   </div>
+  {
+    description !== "" && (
+      <div
+        class="mx-auto max-w-3xl pt-16 text-xl font-light"
+        data-aos="fade-down"
+      >
+        {description}
+      </div>
+    )
+  }
 </Section>

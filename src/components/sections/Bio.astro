@@ -1,15 +1,22 @@
 ---
 import BioItem from "@/components/shared/BioItem.astro";
 import Section from "@/components/shared/Section.astro";
-import bioData from "@/data/bio.json";
+import sectionData from "@/data/bio.json";
 
 const darkmode = false;
 
-const { id, title, subtitle, bios } = bioData;
+const {
+  id,
+  title,
+  subtitle,
+  description = "",
+  config = {},
+  bios,
+} = sectionData;
 const lineColor = darkmode ? "before:bg-white" : "before:bg-primary";
 ---
 
-<Section title={title} subtitle={subtitle} id={id} darkmode={darkmode}>
+<Section {id} {title} {subtitle} {config}>
   <div class="mx-auto max-w-7xl">
     <ul class={`timeline ${lineColor}`}>
       {
@@ -24,4 +31,14 @@ const lineColor = darkmode ? "before:bg-white" : "before:bg-primary";
       }
     </ul>
   </div>
+  {
+    description !== "" && (
+      <div
+        class="mx-auto max-w-3xl pt-16 text-xl font-light"
+        data-aos="fade-down"
+      >
+        {description}
+      </div>
+    )
+  }
 </Section>

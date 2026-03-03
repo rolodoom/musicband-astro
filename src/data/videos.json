@@ -2,6 +2,8 @@
   "id": "videos",
   "title": "Videos",
   "subtitle": "From live shows to studio sessions—see it all here.",
+  "description": "",
+  "config": {},
   "videos": [
     {
       "title": "Highway Tune",
