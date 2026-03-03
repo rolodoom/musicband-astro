@@ -7,11 +7,21 @@ const { musician, index } = Astro.props;
 
 const { name, instrument, image, description, social } = musician;
 const slug = slugify(musician.name);
+
+const hasDescription = description?.trim().length > 0;
 ---
 
 <>
   <a
-    data-modal-trigger={`modal-${slug}`}
+    {...hasDescription
+      ? {
+          "data-modal-trigger": `modal-${slug}`,
+        }
+      : {
+          href: `/images/musicians/${image}`,
+          "data-fancybox": true,
+          "data-caption": `${name} - ${instrument}`,
+        }}
     data-aos="fade-up"
     data-aos-delay={index * 150}
     class="group relative block cursor-pointer overflow-hidden"
