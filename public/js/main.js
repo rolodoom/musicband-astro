@@ -170,7 +170,7 @@
       navLinks.forEach((link) => {
         link.classList.remove("text-primary");
         if (link.classList.contains("nav-link"))
-          link.classList.add("text-gray-300");
+          link.classList.add("text-white");
         if (link.classList.contains("mobile-nav-link"))
           link.classList.add("text-gray-400");
       });
@@ -179,7 +179,7 @@
       if (current) {
         navLinks.forEach((link) => {
           if (link.dataset.section === current.id) {
-            link.classList.remove("text-gray-300", "text-gray-400");
+            link.classList.remove("text-white", "text-gray-400");
             link.classList.add("text-primary");
           }
         });
@@ -227,7 +227,7 @@
     });
 
     window.addEventListener("resize", () => {
-      if (window.innerWidth >= 768) closeMenu();
+      if (window.innerWidth >= 1024) closeMenu();
     });
 
     // Initial state evaluation

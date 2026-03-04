@@ -28,12 +28,12 @@ const { bandName, navBarlogo } = bandData;
       </a>
 
       <!-- Desktop Navigation -->
-      <div class="hidden md:flex md:space-x-8">
+      <div class="hidden lg:flex lg:space-x-3 xl:space-x-4">
         {
           navItems.map((item) => (
             <a
               href={item.url}
-              class="nav-link font-heading hover:text-primary text-md px-3 py-2 font-bold tracking-wider text-gray-300 uppercase transition-colors duration-300"
+              class="nav-link font-heading hover:text-primary px-3 py-2 text-[15px] font-bold tracking-wider text-white uppercase transition-colors duration-300"
               data-section={item.url.substring(1)}
             >
               {item.label}
@@ -45,7 +45,7 @@ const { bandName, navBarlogo } = bandData;
       <!-- Mobile menu button -->
       <button
         id="menuBtn"
-        class="relative rounded p-2 text-white hover:bg-white/10 md:hidden"
+        class="relative rounded p-2 text-white hover:bg-white/10 lg:hidden"
         aria-label="Toggle menu"
       >
         <!-- Hamburger -->
