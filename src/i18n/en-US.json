@@ -3,5 +3,6 @@
   "label": "Label",
   "format": "Format",
   "close": "Close",
-  "goback": "Go back"
+  "goback": "Go back",
+  "continue": "Continue"
 }

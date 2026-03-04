@@ -2,6 +2,7 @@
 import mastheadDataJson from "@/data/masthead.json";
 import Button from "../ui/Button.astro";
 import { Icon } from "astro-icon/components";
+import { t } from "@/i18n";
 
 const mastheadData: {
   logo?: { image: string; description: string };
@@ -34,7 +35,7 @@ const { bgImage, text = null, logo = null } = mastheadData;
               class="h-30 max-w-[320px]"
             />
             <Button href="#videos" size="big">
-              Continue
+              {t("continue")}
               <Icon name="fa7-solid:angle-down" size={24} class="ml-1" />
             </Button>
           </div>
@@ -47,7 +48,7 @@ const { bgImage, text = null, logo = null } = mastheadData;
               {text?.title}
             </h1>
             <Button href="#videos" size="big" class="mt-6">
-              Continue
+              {t("continue")}
               <Icon name="fa7-solid:angle-down" size={24} class="ml-1" />
             </Button>
           </div>
