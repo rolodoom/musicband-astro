@@ -4,7 +4,7 @@ import Button from "../ui/Button.astro";
 import { Icon } from "astro-icon/components";
 
 const mastheadData: {
-  logo?: { image: string; descritpion: string };
+  logo?: { image: string; description: string };
   text?: { title: string; subtitle: string };
   bgImage: string;
 } = mastheadDataJson;
@@ -30,7 +30,7 @@ const { bgImage, text = null, logo = null } = mastheadData;
           <div class="mx-auto flex flex-col items-center gap-6">
             <img
               src={logo.image}
-              alt={logo.descritpion}
+              alt={logo.description}
               class="h-30 max-w-[320px]"
             />
             <Button href="#videos" size="big">
