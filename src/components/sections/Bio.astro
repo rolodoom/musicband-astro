@@ -12,7 +12,7 @@ const darkmode =
   typeof safeConfig.darkmode === "boolean" ? safeConfig.darkmode : false;
 
 const lineColor = darkmode ? "before:bg-white" : "before:bg-primary";
-const proseColor = darkmode ? "prose-invert" : "prose-slate";
+const proseColor = darkmode ? "prose-invert text-white" : "prose-slate";
 ---
 
 <Section {id} {title} {subtitle} {config}>
@@ -39,7 +39,7 @@ const proseColor = darkmode ? "prose-invert" : "prose-slate";
         class={
           bios.length > 0
             ? "mx-auto max-w-3xl pt-16 text-center text-xl font-light"
-            : `prose ${proseColor} mx-auto max-w-3xl`
+            : `prose ${proseColor} mx-auto max-w-3xl text-justify`
         }
         data-aos="fade-down"
         set:html={description}
