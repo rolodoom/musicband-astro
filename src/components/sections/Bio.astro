@@ -12,31 +12,38 @@ const darkmode =
   typeof safeConfig.darkmode === "boolean" ? safeConfig.darkmode : false;
 
 const lineColor = darkmode ? "before:bg-white" : "before:bg-primary";
+const proseColor = darkmode ? "prose-invert" : "prose-slate";
 ---
 
 <Section {id} {title} {subtitle} {config}>
-  <div class="mx-auto max-w-7xl">
-    <ul class={`timeline ${lineColor}`}>
-      {
-        bios.map((bio, index) => (
-          <BioItem
-            bio={bio}
-            index={index}
-            isLast={index === bios.length - 1}
-            darkmode={darkmode}
-          />
-        ))
-      }
-    </ul>
-  </div>
+  {
+    bios.length >= 0 && (
+      <div class="mx-auto max-w-7xl">
+        <ul class={`timeline ${lineColor}`}>
+          {bios.map((bio, index) => (
+            <BioItem
+              bio={bio}
+              index={index}
+              isLast={index === bios.length - 1}
+              darkmode={darkmode}
+            />
+          ))}
+        </ul>
+      </div>
+    )
+  }
+
   {
     description !== "" && (
       <div
-        class="mx-auto max-w-3xl pt-16 text-xl font-light"
+        class={
+          bios.length > 0
+            ? "mx-auto max-w-3xl pt-16 text-center text-xl font-light"
+            : `prose ${proseColor} mx-auto max-w-3xl`
+        }
         data-aos="fade-down"
-      >
-        {description}
-      </div>
+        set:html={description}
+      />
     )
   }
 </Section>

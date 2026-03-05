@@ -79,10 +79,10 @@ const sectionClass = config?.bgImage ? "bg-cover bg-center" : "";
     }
 
     <!-- Content -->
-    <div class={`relative z-10 p-8 container text-center ${textColor}`}>
+    <div class={`relative z-10 p-8 container ${textColor}`}>
       <div class="mb-16">
         <h1
-          class={`mb-4 text-4xl uppercase font-heading font-bold ${titleColor}`}
+          class={`mb-4 text-4xl uppercase text-center font-heading font-bold ${titleColor}`}
           {...titleAosAttributes}
         >
           {title}
@@ -90,7 +90,7 @@ const sectionClass = config?.bgImage ? "bg-cover bg-center" : "";
         {
           subtitle && (
             <h2
-              class={`text-md italic ${subtitleColor}`}
+              class={`text-center text-xl italic ${subtitleColor}`}
               {...subtitleAosAttributes}
             >
               {subtitle}
